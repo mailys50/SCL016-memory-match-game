@@ -1,20 +1,115 @@
-
+/* vistas */
+.homePage {
+  display: none;
+}
+.categoriaHtml{
+    display: block;
+}
+.categoriaCss{
+    display: none;
+}
+.categoriaJs{
+    display: none;
+}
+.endPage{
+    display: none;
+}
 *{
     margin: 0;
     padding: 0;
 }
-body{
-    background-image: url(fondo.jpg); 
-    background-repeat: no-repeat;
-    background-size:cover;
-  }
-input{
-    
-   width: 123px;
-    height: 145px;
-    margin-top:0 ;
-    margin-left: 0;
+
+/*primera pagina*/
+
+.homePage,.categoriaHtml,.endPage {
+  background-image: url("fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+.img-logo {
+  margin-top: 10px;
+  width: 95px;
+  height: 120px;
+}
+
+.titleHomePage {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+}
+
+.subtitleHomePage {
+  margin-top: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 42px;
+  color: white;
+  text-align: center;
+}
+header {
+  text-align: center;
+} 
+input{
+     width: 123px;
+     height: 145px;
+     margin-top:0 ;
+     margin-left: 0;
+ }
+.button-HTML,
+.button-CSS,
+.button-JS {
+  width: 160px;
+  height: 160px;
+}
+.rootbuttons {
+  width: auto;
+  height: 320px;
+  margin-top: 40px;
+  margin-left: 180px;
+  margin-right: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.HTML,
+.JS {
+  align-self: flex-end;
+}
+
+/*pagina final*/
+.endPage {
+  position: absolute;
+  top: 10px;
+}
+.block-win {
+  background-image: url("fondoGanador.png");
+  background-size: 1200px 400px;
+  margin-left: 50px;
+  width: 1200px;
+  height: 400px; 
+}
+.button-newLevel {
+  width: 100px;
+  height: 60px;
+  background: rgba(43, 222, 234, 0.8);
+  border: 2px solid #1265b0;
+  box-sizing: border-box;
+  border-radius: 100px;
+}
+.newLevel{
+    display: flex;
+    justify-content: center;
+} 
+
+/* segunda pantalla */
+
 .juegoMemoria{    
     height: auto;
     margin-top: 94px;
@@ -24,38 +119,28 @@ input{
     flex-wrap: wrap;/* orden en una sola fila*/
     justify-content: space-around;/*justificar el contenido:
     espacio alrededor rearte todo el contenido desde elcentro hacia la derecha y hacia la izquierda*/
-    align-items: center;
-}
+    /* align-items: center;  */
+} 
+
 .memory-card{
       flex-basis: 100px;/*ancho de la caja*/
       position: relative;
+      margin-top: 2%;
+     
 }
-.inicio{
-    display: none;
-}
-.categoriaHtml{
-    display: none;
-}
-.categoriaCss{
-    display: none;
-}
-.categoriaJs{
-    display: block;
-}
-
-
 .mitadRobot{
     position: relative;
-    width: 200px;
+    flex-basis: 200px;/*ancho de la caja*/
+   
     height: 159px;
-    left: 648px;
+    /* left: 400px; */
     top: 37px;
 }
 .tituloCategorias{
-    position: absolute;
-    width: 555px;
+    position: absolute; 
+    flex-basis: 555px;/*ancho de la caja*/
     height: 82px;
-    left: 461px;
+    left: 400px;
     top: 209px;
     font-family: Raleway;
     font-style: normal;
@@ -67,19 +152,20 @@ input{
 
 }
 #root{
-    position: absolute;    
-    width: 1258px;
-    height: 670px;
-    left: 91px;
-    top: 306px;
+    /* position: absolute;     */
+    flex-basis: 1240px;/*ancho de la caja*/
+    height: 500px; 
+    padding: 0px 40px;
+    /* left: 40px;
+    top: 306px; */
     background: rgba(19, 114, 167, 0.4);
     border-radius: 100px;
-}
+} 
 p{  
     position: absolute;
-    width: 527px;
+    flex-basis: 527px;/*ancho de la caja*/
     height: 70px;
-    left: 425px;
+    left: 390px;
     top: -1px;    
     font-family: Roboto;
     font-style: normal;
@@ -90,7 +176,7 @@ p{
 }
 #reloj{
     position: absolute;
-    width: 233px;
+    flex-basis: 233px;/*ancho de la caja*/
     height: 59px;
     left: 583px;
     top: 876px;
@@ -99,7 +185,7 @@ p{
     text-align: center;    
     color: #FFFFFF;
 }
-.botonInicio{
+/* .botonInicio{
     position: absolute;
     width: 159.73px;
     height: 101.63px;
@@ -107,6 +193,5 @@ p{
     top: 839.63px;
     border: 1px solid rgba(167, 68, 244, 0.6);
     box-sizing: border-box;
-    
    
-}
+} */
