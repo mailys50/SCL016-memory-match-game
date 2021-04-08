@@ -21,9 +21,6 @@ function timerF() {
 
 const AppCss = () => {
 
-
-//creamos un div y su clase 
-const AppCssNivel2 = () => {
   const el = document.createElement('div');
   el.className = 'App';
 
@@ -39,30 +36,16 @@ for (let i = 0; i < board.length; i++) {
   card.setAttribute("src", cssNivelUno.items[board[i]].image);
   // console.log(cssNivelUno.items[board[i]].image);
   card.setAttribute("class", "back1");
-  // Establecemos un data-atributo "cardIndex" para identificar la cartacon el índice del array board
-  card.dataset.cardIndex = cssNivelDos.items[board[i]].class;
+  // Establecemos un data-atributo "cardIndex" para identificar la carta
+  // con el índice del array board
+ card.dataset.cardIndex = cssNivelUno.items[board[i]].class;
   card.addEventListener('click', flipCard);
-  el.appendChild(card);  
+  el.appendChild(card);
+  
  }
  return el;
 };
 
-
-//funcion donde se barajan las cartas e imprimir  las cartas
-function shuffle(cards){
-  let shufflecards=[];
-  while(cards.length){
-    shufflecards.push(cards.splice(Math.floor(Math.random() *cards.length), 1)[0]);
-   
-  }
-  return shufflecards
-}
-
-
-
-
-
-//funcion para crear las cartas invertidas
 function flipCard(e){
   startTime++;
   if(startTime==1) {
@@ -76,13 +59,9 @@ function flipCard(e){
   e.target.className = "front";
   // Añade la carta a las actualmente seleccionadas guaradr abietas
   cardsInPlay.push({cardElement: e.target, cardIndex: cardIndex});
-  //para mostrar el zoom de las cartas por 350 
-  setTimeout(()=>{e.target.className="";}, 350);
+  // Comprueba si hay "match"
   // Se llama con setTimeout para dejar que el navegador muestre la carta girada primero
-  setTimeout(testMatch, 350);
-  
- 
-  
+  setTimeout(testMatch, 300);
 }
 
 function testMatch(){
@@ -124,7 +103,6 @@ function leveltwo(){
   document.querySelector(".endPage").style.display="none";
   document.querySelector(".cssCategoryLevel2").style.display="block";
 }
-
 function myStopFunction() {
   clearInterval(timer);
 }
@@ -137,5 +115,6 @@ function tryAgain(){
   // Inicia una nueva jugada
   cardsInPlay = [];
 }
+
 
 export default AppCss;

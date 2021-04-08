@@ -11,10 +11,6 @@ const startButtonHtml = document.getElementById("startButtonHtml");
 const buttonCss =document.getElementById("buttonCss"); 
 const startButtonCss = document.getElementById("startButtonCss");
 const buttonJs =document.getElementById("buttonJs"); 
-const startButtonHtml = document.getElementById("startButtonHtml");
-const startButtonHtml2 = document.getElementById("startButtonHtml2");
-const startButtonCss = document.getElementById("startButtonCss");
-const startButtonCss2 = document.getElementById("startButtonCss2");
 const startButtonJs = document.getElementById("startButtonJs");
 const startButton = document.getElementById("startButton");
 const startHtmlLevel2 = document.getElementById("startHtmlLevel2");
@@ -26,14 +22,10 @@ const startButtonEnd = document.getElementById("startButtonEnd");
 
 const secondPage = () => {                                               
     document.querySelector('.homePage').style.display = "none";
-    document.querySelector('.endPage').style.display="none";
+    document.querySelector('.endPage').style.display="none"
     document.querySelector('.htmlCategory').style.display = "block";
     document.querySelector('.cssCategory').style.display = "none";
     document.querySelector('.jsCategory').style.display = "none";
-    document.querySelector('.htmlCategoryN2').style.display = "none";
-    document.querySelector('.cssCategoryN2').style.display = "none";
-    document.querySelector('.jsCategoryN2').style.display = "none";
-    document.querySelector('.PageCongratulations').style.display = "none";
 }
 
 buttonHtml.addEventListener("click", secondPage); 
@@ -42,7 +34,7 @@ buttonHtml.addEventListener("click", secondPage);
 
 const thirdPage = () => {                                                    
   document.querySelector('.homePage').style.display = "none";
-  document.querySelector('.endPage').style.display="none";
+  document.querySelector('.endPage').style.display="none"
   document.querySelector('.htmlCategory').style.display = "none";
   document.querySelector('.cssCategory').style.display = "block";
   document.querySelector('.jsCategory').style.display = "none";
@@ -54,14 +46,10 @@ buttonCss.addEventListener("click", thirdPage);
 
 const quarterPage = () => {                                                    
   document.querySelector('.homePage').style.display = "none";
-  document.querySelector('.endPage').style.display="none";
+  document.querySelector('.endPage').style.display="none"
   document.querySelector('.htmlCategory').style.display = "none";
   document.querySelector('.cssCategory').style.display = "none";
   document.querySelector('.jsCategory').style.display = "block";
-  document.querySelector('.htmlCategoryN2').style.display = "none";
-  document.querySelector('.cssCategoryN2').style.display = "none";
-  document.querySelector('.jsCategoryN2').style.display = "none";
-  document.querySelector('.PageCongratulations').style.display = "none";
 }
 
 buttonJs.addEventListener("click", quarterPage); 
