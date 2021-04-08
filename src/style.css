@@ -1,4 +1,4 @@
- /* .homePage {
+/* .homePage {
   display: none;
 }  */
 .htmlCategory {
@@ -7,6 +7,7 @@
 .cssCategory {
   display: none;
 }
+
 .jsCategory {
   display: none;
 }
@@ -17,13 +18,16 @@
 .endPage {
   display: none;
 }
-.htmlCategoryN2{
+.endPageFinal {
   display: none;
 }
-.cssCategoryN2 {
+.htmlCategoryLevel2 {
   display: none;
 }
-.jsCategoryN2 {
+.cssCategoryLevel2 {
+  display: none;
+}
+.jsCategoryLevel2 {
   display: none;
 }
 /* Diseño todas las páginas */
@@ -59,8 +63,9 @@ header {
   
 }
 .imgLogo {
-  width: 68%;
-  max-width: 140%;
+  width: 100%;
+  max-width: 130px;
+  height: 130px;
   background-size: cover;
   
 }
@@ -71,16 +76,13 @@ header {
   justify-content: center;
   align-self: center; 
   width: 100%;
-  max-width: 55%;
+  max-width: 300px;
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
-  text-align: center;
   color: #ffffff;
-  font-size: 250%;
-  margin-top: -9px;
-  margin-left: 10px;
-   
+  justify-content: center;
+  align-self: center;
 }
 .subtitle {
   display: flex;
@@ -108,7 +110,7 @@ header {
   flex-wrap: wrap;
   align-self: center;
   width: auto;
-  height: 40%;
+  height: 300px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -133,37 +135,38 @@ justify-self: center;
   margin-left: 18%;
   align-self: center;
 }
-/* Página categoria Html */
+
+/* Página categorias */
 
 .halfRobot {
   width: 100%;
-  max-width: 56%;
-  min-width: 2%;
-  height: 17.5%;
+  max-width: 100px;
+  min-width: 20px;
+  height: 100px;
   background-size: cover;
 }
 
 .gameTable {
-  width: 100%;
-  max-width: 95%;
-  max-height: 80%;
+  /* width: 100%; */
+  max-width: 1400px;
+  height: auto;
   background: rgba(19, 114, 167, 0.4);
   border-radius: 100px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-size: cover;
 }
 
 p {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 150%;
+  font-size: 30px;
   color: #0689ff;
   text-align: justify; /* responsive*/
-  margin: -29px 10px 10px 10px;
+}
+
+.topRoot {
+  flex-wrap: wrap;
+  color: #ffffff;
+  display: flex;
 }
 
 .timeContainer {
@@ -186,11 +189,12 @@ p {
   color: #ffffff;
 }
 
-.startButton, .startButtonCss, .startButtonHtml, .startButtonJs {
-  width: 10%;
-  height: 8%;
-  border: 1px solid rgba(167, 68, 244, 0.6);
+.startButton {
+  width: 11%;
+  height: 50px;
+  display: flex;
   box-sizing: border-box;
+  justify-self: flex-end;
 }
 
 /* Página final */
@@ -198,7 +202,7 @@ p {
 .blockWin {
   width: 90%;
   margin: auto;
-  height: 75%;
+  height: 450px;
   flex-direction: column;
   background: url(img/winningFund.png);
   background-position: center center;
@@ -238,201 +242,163 @@ p {
   height: 8%;
 }
 
-.rootbuttonsEnd {
-  flex-wrap: wrap;
+.returnButtonEnd {
+  display: flex;
   justify-content: center;
-  align-self: flex-end;
-  width: auto;
-  height: 250px;
+}
+.startButtonEnd {
+  width: 17%;
+  height: 60px;
+  margin: 20px;
+}
+
+/* Cartas de la base de datos */
+
+.App {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-}
-  .App{  
-  flex-direction: row;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1400px;
-  height: 35%;
+  height: auto;
   background-size: cover;
   justify-content: space-around;
   align-content: center; 
 }
 
-
-img.back, img.front{
-  content: url('img/HTML.png');
-  flex-shrink: 2;
-  
+img.back {
+  content: url("img/HTML.png");
 }
-img.back1{
-  content: url('img/CSS.png');
-  
+img.back1 {
+  content: url("img/CSS.png");
 }
-
-img.back2{
-  content: url('img/JS.png');
- 
-}
-.back, .back1, .back2, .front{
- min-width: 103px;
-  max-width: 118px;
-  margin: 22px  32px 12px;
+img.back2 {
+  content: url("img/JS.png");
 }
 
-.root, .rootUno, .root1, .rootDos, .root2, .rootTres{
-    position: relative;
-    flex-wrap: wrap;
-    margin: 3px  3px 3px 3px;
-
-  }
+.back,
+.back1,
+.back2,
+.front {
+  max-width: 150px;
+  min-width: 40px;
+  margin: 24px 20px;
+}
 
 /* para dar zoom a las cartas al darle un click */
-/* .carta1,
-.carta2,
-.carta3,
-.carta4,
-.carta5,
-.carta6,
-.carta7,
-.carta8{ backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  transform: rotateY(0deg);
-  transition: all 0.3s linear; */
-  
-   
-/* } */
-.front{
+.front {
   -webkit-transform: scale(1.3);
   -moz-transform: scale(1.3);
   -o-transform: scale(1.3);
   transform: scale(1.3);
 }
- @media screen and (max-width: 670px) {
+.returnButton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 480px) {
   * {
-    margin: 15px 11px;
+    margin: 2px;
     padding-left: 1px;
     padding-right: 1px;
-    box-sizing: border-box;
-}
-  
-  body{
-    width:320px ;
+  }
+  body {
+    width: 100%;
     height: 568px;
-   
   }
+
+  /* pagina inicio */
+
   .imgLogo {
-    width: 56px;    
-    height: 71px;
-    margin-top: -25px;
-    }
-    .title {
-  
-      font-size: 145%;
-      margin-top: -9px;
-      margin-left: 10px;
-       
-    }
-    .subtitleHomePage {   
-     font-size: 120%;    
-    }
-  .App{
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-top:-5px ;
-    margin-left: 14px;
+    margin-top: 20px;
+    width: 60px;
+    height: 90px;
   }
-  .gameTable{
-    background-color:transparent ;
+  .subtitleHomePage {
+    font-family: Roboto;
+    font-size: 22px;
+    line-height: 42px;
+    color: #ffffff;
   }
-  .root, .root1, .root2{
+  .rootbuttons {
+    margin-top: 50px;
+    height: 250px;
+  }
 
-    margin-top:-13px ;
-    margin-left: -10px;
-    margin-bottom:38px ;
-    margin-right: -42px ;
-    height: 300px;
-    width: 300px; 
-  }
   .buttonHTML,
-.buttonJS,
-.buttonCSS {
-  width: 78px;
-  height: 78px;
-  display: block;
-  
-}
-.buttonHTML{
-  margin-top: -5px;
-}
-.buttonJS{
-  margin-top: -20px;
-}
-.buttonCSS{
-  margin-top: -11px; 
-}
-.hits{
-  margin-top: 18px;
-  margin-left: -10px;
-}
-.halfRobot {
-  width: 63%;
-  max-width: 63px;
-  min-width: 20px;
-  height: 50px;
-  margin-top: 0px;
-  margin-left: 0px;
-  background-size: cover;
-}
-.startButton, .startButtonCss, .startButtonHtml, .startButtonJs{
-  width: 92px;
-  height: 48px;
-  margin-top: -28px;
-  margin-left: 165px;
- 
-}
-
-img.back{
-  width: 70px;
-  height: 45.6px;
-  flex-grow: 1;
-  align-items: center ;
-  
-}
-img.back1{
-  width: 70px;
-  height: 45.6px;
-  flex-grow: 1;
-  align-items: center ;
-  
-
-
-}
-img.back2, .transition {
-  width: 70px;
-  height: 45.6px;
-  flex-grow: 1;
-  align-items: center ;
-  
-  
-  
-}
-.back, .back1, .back2, .front{
-  min-width: 42px;
-   max-width: 42px;
-   margin: -1px  32px 1px 2px;
- }
-  
-  
-p{
-  font-size: 16px;
-}
-
-.transition {
-  
-   transform: scale(0.0);
-}
+  .buttonJS,
+  .buttonCSS {
+    width: 100px;
+    height: 100px;
+    display: block;
   }
+
+  /* paginas de cartas */
+
+  .halfRobot {
+    width: 50px;
+    height: 50px;
+  }
+  .title {
+    font-size: 10px;
+  }
+  p {
+    font-family: Roboto;
+    font-size: 20px;
+    color: #0689ff;
+    text-align: justify; /* responsive*/
+  }
+  h4 {
+    font-size: 15px;
+  }
+  .gameTable {
+    margin-top: 10px;
+    width: 100%;
+    height: 350px;
+    background: rgba(19, 114, 167, 0.4);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-size: cover;
+  }
+  .App {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    justify-content: space-around;
+    align-content: center;
+  }
+  .back,
+  .back1,
+  .back2,
+  .front {
+    width: 65px;
+    margin: 15px 10px;
+  }
+  .startButton {
+    width: 14%;
+    height: 40px;
+  }
+  .subtitleEndPage {
+    margin-top: 10%;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .buttonNewLevel {
+    width: 120px;
+    height: 50px;
+  }
+
+  .startButtonEnd {
+    width: 35%;
+    height: 40px;
+    margin: 20px;
+  }
+}

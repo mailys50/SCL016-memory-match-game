@@ -1,29 +1,26 @@
 
-import cssNivelUno from '../data/cssNivelUno/cssNivelUno.js';
+import jsNivelDos from '../data/jsNivelDos/jsNivelDos.js';
 
 let timer;
-let cards = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+let cards = [0,1,2,3,4,5,6,7,8,9,10,11];
 let cardsInPlay= [];
 let board=[];
-let hits = 0;
+let hits=0;
 let startTime=0;
 let attempts=0;
 
 function timerF() {
   let time = 0;
   timer = setInterval(() => {
+
     time++
-    document.getElementById('timerCss').innerHTML = time;
-    document.getElementById('timerEnd').innerHTML = time;
+    document.getElementById('timerJs2').innerHTML = time;
+    document.getElementById('timerEndFinal').innerHTML = time;
   }, 1000);
 }
 
+const AppJsLevel2 = () => {
 
-const AppCss = () => {
-
-
-//creamos un div y su clase 
-const AppCssNivel2 = () => {
   const el = document.createElement('div');
   el.className = 'App';
 
@@ -34,66 +31,45 @@ const AppCssNivel2 = () => {
   }
 //realizamos un ciclo para iterar sobre cada una de las cartas y formar la mesa de juego
 for (let i = 0; i < board.length; i++) {
-  
+
   const card= document.createElement("img");
-  card.setAttribute("src", cssNivelUno.items[board[i]].image);
-  // console.log(cssNivelUno.items[board[i]].image);
-  card.setAttribute("class", "back1");
-  // Establecemos un data-atributo "cardIndex" para identificar la cartacon el índice del array board
-  card.dataset.cardIndex = cssNivelDos.items[board[i]].class;
+  card.setAttribute("src", jsNivelDos.items[board[i]].image);
+  card.setAttribute("class", "back2");
+  // Establecemos un data-atributo "cardIndex" para identificar la carta
+  // con el índice del array board
+ card.dataset.cardIndex = jsNivelDos.items[board[i]].class;
   card.addEventListener('click', flipCard);
-  el.appendChild(card);  
+  el.appendChild(card);
+
  }
+
  return el;
 };
 
-
-//funcion donde se barajan las cartas e imprimir  las cartas
-function shuffle(cards){
-  let shufflecards=[];
-  while(cards.length){
-    shufflecards.push(cards.splice(Math.floor(Math.random() *cards.length), 1)[0]);
-   
-  }
-  return shufflecards
-}
-
-
-
-
-
-//funcion para crear las cartas invertidas
 function flipCard(e){
   startTime++;
   if(startTime==1) {
     timerF()
   } 
   // Recuperamos el índice de la carta pulsada del data-atributo "cardIndex"
-  // console.log(e.target);
   var cardIndex = parseInt(e.target.dataset.cardIndex);
-  // console.log(cardIndex);
   // Coge la clase a utilizar (imagen a mostrar) del array board
   e.target.className = "front";
   // Añade la carta a las actualmente seleccionadas guaradr abietas
   cardsInPlay.push({cardElement: e.target, cardIndex: cardIndex});
-  //para mostrar el zoom de las cartas por 350 
-  setTimeout(()=>{e.target.className="";}, 350);
+  // Comprueba si hay "match"
   // Se llama con setTimeout para dejar que el navegador muestre la carta girada primero
-  setTimeout(testMatch, 350);
-  
- 
-  
+  setTimeout(testMatch, 300);
 }
 
 function testMatch(){
   // Si no se han seleccionado dos cartas no hace nada
   if (cardsInPlay.length < 2) return;
   attempts++;
-  document.getElementById("attemptsCss").innerHTML=attempts;
-  document.getElementById("attempts").innerHTML=attempts;
+  document.getElementById("attemptsJs2").innerHTML=attempts;
+  document.getElementById("attemptsEnd").innerHTML=attempts;
   // Comprueba si las cartas seleccionadas son iguales y llama
   // a la función correspondiente
-
   if (board[cardsInPlay[0].cardIndex] === board[cardsInPlay[1].cardIndex]){
     match();
   }
@@ -103,7 +79,6 @@ function testMatch(){
 }
 
 // Hay pareja
-
 function match(){
   // Eliminamos el controlador del evento click de las cartas
   cardsInPlay[0].cardElement.removeEventListener('click', flipCard);
@@ -111,31 +86,27 @@ function match(){
   // Inicia una nueva jugada
   cardsInPlay = [];
   hits++;
-  document.getElementById("hitsCss").innerHTML=hits;
+  document.getElementById("hitsJs2").innerHTML=hits;
 if (hits==6) {
-    document.querySelector(".endPage").style.display="block";
-    document.querySelector(".cssCategory").style.display="none";
-    const newLevel =document.getElementById("buttonNewLevel");
-    newLevel.addEventListener("click",leveltwo);
+    document.querySelector(".endPageFinal").style.display="block";
+    document.querySelector(".jsCategoryLevel2").style.display="none";
     myStopFunction();
  }
 }
-function leveltwo(){
-  document.querySelector(".endPage").style.display="none";
-  document.querySelector(".cssCategoryLevel2").style.display="block";
-}
-
 function myStopFunction() {
   clearInterval(timer);
 }
 
 // No hay pareja
+
 function tryAgain(){
   // Se da vuelta a cierran las dos cartas
-  cardsInPlay[0].cardElement.className = 'back1';
-  cardsInPlay[1].cardElement.className = 'back1';
+  cardsInPlay[0].cardElement.className = 'back2';
+  cardsInPlay[1].cardElement.className = 'back2';
   // Inicia una nueva jugada
   cardsInPlay = [];
+
+    // document.getElementsByName("aciertos");
 }
 
-export default AppCss;
+export default AppJsLevel2;

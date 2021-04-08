@@ -386,9 +386,6 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 * [ ] UI: Es _responsive_.
 * [ ] UI: La interfaz sigue los fundamentos de _visual design_.
 
-
-
-
 # INICIO DEL PROYECTO
 -se inicia con la lectura, analisis y comprención del proyecto.
 
@@ -397,16 +394,17 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 -Nos reunimos para escojer el tema de nuestro proyecto, el nombre del mismo y hacia quien va dirigido.
 
 ## TEMA DEL PROYECTO
-Este proyecto fue pensado para aquellos usuarios que deseen aprender a traves de un juego de memoria los conceptos basicos de programación.
+Este proyecto es un juego de enseñanza, pensado para aquellos usuarios que deseen aprender conceptos básico de programación de una forma entretenida, a través de este juego de memoria.
 
  ## TIPO DE USUARIO
- va dirijido a usuarios mayores de 15 años, en particular a esos usuarios que deseen aprender los conceptos basicos de programacion a traves de un juego. 
+ Va dirijido a usuarios mayores de 15 años, en particular a esos usuarios que deseen aprender los conceptos basicos de programacion a traves de un juego.
 
  ## TITULO DEL PROYECTO
 MEMORY CODE
 
 ## PROTOTIPO DE BAJA FIDELIDAD:
--realizamos el prototipo de baja fidelidad para hacer un testeo con los posible usuarios
+-Realizamos el prototipo de baja fidelidad para hacer un testeo con los posible usuarios.
+
  <img src="img/prototipoUno.png" alt="prototipoUno" width="200"/>
 
 ## TESTEO
@@ -439,7 +437,7 @@ MEMORY CODE
 
  ## PROTOTIPO DE ALTA FIDELIDAD
 
- tomando en concideracion las historias de usuario comenzamos  nuestro prototipo de alta fidelidad. 
+ Tomando en concideracion las historias de usuario comenzamos  nuestro prototipo de alta fidelidad.
  - Realizamos dos prototipos para obtener feedback sobre ellos y tomar su opinion para elejir el trototipo a trabajar:
 
 ### opción 1
@@ -549,8 +547,3 @@ mostramos la funcionalidad del proyecto y obtuvimos buenos comentarios
  ## TEST UNITARIO
 
  investigamos sobre los test unitario y existen varias formas de hacerlos
- 
-
-
-
- 
