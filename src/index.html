@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Memory Code</title>
@@ -11,32 +11,31 @@
 </head>
 <body>
 
-  <!-- Pagina de inicio -->
+  <!-- Pagina de Home -->
   <div class="homePage">
     <header>
       <div class="robot">
-        <img class="imgLogo" src="img/logoRobot.png" alt="logo de un robot">
+        <img class="imgLogo" src="img/robot.png" alt="logo de un robot">
       </div>
       <div class="title">
-        <h1 class="titleHomePage">MEMORY CODE</h1>
+        MEMORY CODE
       </div>
       <div class="subtitle">
-        <h2 class="subtitleHomePage">Aprende a programar divirtiendote</h2>
+        <h2 class="subtitleHomePage">Learn by playing the basics of programming</h2>
       </div>
     </header>
     <main>
-      <div id="rootbuttons" class="rootbuttons">
-        <div class="HTML">
-          <input type="image" src="img/botonHTML.png" alt="boton para ingresar a HTML" class="buttonHTML"
-            id="buttonHtml">
-        </div>
-        <div class="CSS">
-          <input type="image" src="img/botonCSS.png" alt="Boton para ingresar a CSS" class="buttonCSS" id="buttonCss">
-        </div>
-        <div class="JS">
-          <input type="image" src="img/botonJS.png" alt="boton para ingresar a JS" class="buttonJS" id="buttonJs">
-        </div>
+      <div class="CSS rootbuttons ">
+        <img src="img/buttonCSS.png" alt="button para ingresar a CSS" class="buttonCSS" id="buttonCss">
       </div>
+      <div id="rootbuttons" class="rootbuttons">              
+        <div class="HTML">
+          <img src="img/buttonHTML.png" alt="button para ingresar a HTML" class="buttonHTML" id="buttonHtml">
+       </div>
+         <div class="JS">
+          <img src="img/buttonJS.png" alt="button para ingresar a JS" class="buttonJS" id="buttonJs">
+      </div>
+    </div>
     </main>
   </div>
 
@@ -44,166 +43,278 @@
   <div class="htmlCategory">
     <header>
       <div class="robot">
-        <img src="img/mitadRobot.png" class="halfRobot" alt="imagen de robot">
+        <img src="img/halfRobot.png" class="halfRobot" alt="imagen de robot">
       </div>
       <div class="title">
-        <h1 class="titleHomePage">MEMORY CODE</h1>
-
+       MEMORY CODE 
+      </div>
+      <div class="timeContainer">
+        <div class="hits">
+          <p class="hits">attempts: <span id="attemptsHNUno" class="timer"></span></p>
+          <p class="hits">hits: <span id="hitsHNUno" class="timer"></span></p>
+          <p class="hits">time: <span id="timerHNUno"></span></p>
+        </div>
       </div>
       <div class="subtitle">
-        <p>Memoriza los pares</p>
+        <p>Memorize the pairs</p>
+      </div>
+    </header>
+    <main>     
+      <div class="gameTable">
+        <div id="root" class="root">
+        </div>
+      </div>    
+      <div class="returButton">
+        <img class="startButtonHtml" src="img/buttonHome.png" id="startButtonHtml" alt="button de home">
+      </div>
+    </main>
+  </div>
+
+
+
+  <!-- categoria HtmlNivel2-->
+  <div class="htmlCategoryN2">
+    <header>
+      <div class="robot">
+        <img src="img/halfRobot.png" class="halfRobot" alt="imagen de robot">
+      </div>
+      <div class="title">
+        MEMORY CODE
+      </div>
+      <div class="timeContainer">
+        <div class="hits">
+          <p class="hits">attempts: <span  id="attemptsHNDos" class="timer"></span></p>
+          <p class="hits">hits: <span  id="hitsHNDos" class="timer"></span></p>
+          <p class="hits">time: <span id="timerHNDos" ></span></p>
+        </div>
+      </div>  
+      <div class="subtitle">
+        <p>Memorize the pairs</p> <br>
+        <p>SECOND LEVEL</p>
       </div>
     </header>
     <main>
       <div class="gameTable">
-        <div id="root">
+        <div id="rootUno" class="root">
         </div>
       </div>
-      <div class="footerRoot"></div>
-
-      <form name="datos" id="datos1" action="cartas.html"> <!--formulario de datos y bot�n-->
-        <div id="fichas"></div>
-        <dl>
-            <dt >Intentos</dt><!--contador intentos-->
-            <dd id="movimientos1"></dd>
-            <dt>Acertados</dt><!--contador aciertos-->
-            <dd id="aciertos1"></dd>
-            <dt>Tiempo</dt><!--temporizador-->
-            <dd id="cronometro1"><span id="minutos1">0</span>:<span id="segundos1">0</span></dd>
-        </dl>   
-
-
-      <!-- <div class="timeContainer" id="timeHtml">
-        <p class="tiempo">Tiempo en segundos:</p>
-        <div id='timer'></div>
-      </div> -->
-      <div class="returnButton">
-        <input type="image" class="startButton" src="img/botonInicio.png" id="startButtonHtml" alt="boton de inicio">
-      </div>
-  </div>
-  </main>
+     <div class="returnButton">
+        <img class="startButtonHtml" src="img/buttonHome.png" id="startButtonHtml2" alt="button de home">
+     </div>
+    </main>
   </div>
 
 
-<!-- categoria Css-->
-<div class="cssCategory">
-  <header>
-    <div class="robot">
-      <img src="img/mitadRobot.png" class="halfRobot" alt="imagen de robot">
-    </div>
-    <div class="title">
-      <h1 class="titleHomePage">MEMORY CODE</h1>
-    </div>
-    <div class="subtitle">
-      <p>Memoriza los pares</p>
-    </div>
-  </header>
-  <main>
-    <div class="gameTable">
-      <div id="root1">
-      </div>
-    </div>
-    <div class="footerRoot"></div>
-    <div class="timeContainer" id="timeHtml">
-      <p class="tiempo">Tiempo en segundos:</p>
-      <div id='timer'></div>
-    </div>
-    <div class="returnButton">
-      <input type="image" class="startButton" src="img/botonInicio.png" id="startButtonCss" alt="boton de inicio">
-    </div>
-</div>
-</main>
-</div>
-
-
-<!-- categoria Js-->
-<div class='jsCategory'>
-  <header>
-    <div class="robot">
-      <img src="img/mitadRobot.png" class="halfRobot" alt="imagen de robot">
-    </div>
-    <div class="title">
-      <h1 class="titleHomePage">MEMORY CODE</h1>
-    </div>
-    <div class="subtitle">
-      <p>Memoriza los pares</p>
-    </div>
-  </header>
-  <main>
-    <div class="gameTable">
-      <div id="root2">
-      </div>
-    </div>
-    <div class="footerRoot"></div>
-
-
-    <form name="datos" id="datos" action="cartas.html"> <!--formulario de datos y bot�n-->
-      <div id="fichas"></div>
-      <dl>
-          <dt>Intentos</dt><!--contador intentos-->
-          <dd id="movimientos"></dd>
-          <dt>Acertados</dt><!--contador aciertos-->
-          <dd id="aciertos"></dd>
-          <dt>Tiempo</dt><!--temporizador-->
-          <dd id="cronometro"><span id="minutos">0</span>:<span id="segundos">0</span></dd>
-      </dl>   
-
-  
-
-
-    <div class="timeContainer" id="timeHtml">
-      <p class="tiempo">Tiempo en segundos:</p>
-      <div id='timer'></div>
-    </div>
-    <div class="returnButton">
-      <input type="image" class="startButton" src="img/botonInicio.png" id="startButtonJs" alt="boton de inicio">
-    </div>
-</div>
-</main>
-</div>
 
 
 
-  <!-- ventana final -->
-  <div class="endPage">
+  <!-- categoria Css-->
+  <div class="cssCategory">
     <header>
       <div class="robot">
-        <img src="img/mitadRobot.png" class="halfRobot" alt="imagen de robot">
+        <img src="img/halfRobot.png" class="halfRobot" alt="imagen de robot">
       </div>
       <div class="title">
-        <h1 class="titleHomePage">MEMORY CODE</h1>
+        MEMORY CODE
+      </div>
+      <div class="timeContainer">
+        <div class="hits">
+          <p class="hits">attempts: <span id="attemptsCNUno" class="timer"></span></p>
+          <p class="hits">hits: <span id="hitsCNUno" class="timer"></span></p>
+          <p class="hits">time: <span id="timerCNUno"></span></p>
+        </div>
+      </div>
+      <div class="subtitle">
+        <p>Memorize the pairs</p>
+      </div>
+    </header>
+    <main>
+      <div class="gameTable">
+        <div id="root1">
+        </div>
+      </div>
+      <div class="returnButton">
+        <input type="image" class="startButtonCss" src="img/buttonHome.png" id="startButtonCss" alt="button de home">
+      </div>  
+    </main>
+  </div>
+
+
+  <!-- categoria Css Nivel 2-->
+  <div class="cssCategoryN2">
+    <header>
+      <div class="robot">
+        <img src="img/halfRobot.png" class="halfRobot" alt="imagen de robot">
+      </div>
+      <div class="title">
+        MEMORY CODE
+      </div>
+      <div class="timeContainer">
+        <div class="hits">
+          <p class="hits">attempts: <span id="attemptsCNDos" class="timer"></span></p>
+          <p class="hits">hits: <span id="hitsCNDos" class="timer"></span></p>
+          <p class="hits">time: <span  id="timerCNDos"></span></p>
+        </div>
+      </div>
+      <div class="subtitle">
+        <p>Memorize the pairs</p> <br>
+        <p>SECOND LEVEL</p>
+      </div>
+    </header>
+    <main>
+      <div class="gameTable">
+        <div id="rootDos">
+        </div>
+      </div>
+      <div class="returnButton">
+        <input type="image" class="startButtonCss" src="img/buttonHome.png" id="startButtonCss2" alt="button  home">
+      </div>
+    </main>
+  </div>
+
+
+
+
+  <!-- categoria Js-->
+  <div class='jsCategory'>
+    <header>
+      <div class="robot">
+        <img src="img/halfRobot.png" class="halfRobot" alt="imagen de robot">
+      </div>
+      <div class="title">
+        MEMORY CODE
+      </div>
+      <div class="timeContainer">
+        <div class="hits">
+          <p class="hits">attempts: <span id="attemptsJNUno" class="timer"></span></p>
+          <p class="hits">hits: <span id="hitsJNUno" class="timer"></span></p>        
+          <p class="hits">Time: <span id="timerJNUno"></span></p>    
+        </div>
+      </div>
+         <div class="subtitle">
+        <p>Memorize the pairs</p>
+      </div>
+    </header>
+    <main>
+      <div class="gameTable">
+        <div id="root2">
+        </div>
+      </div>
+      <div class="returnButton">
+        <input type="image" class="startButtonJs" src="img/buttonHome.png" id="startButtonJs" alt="button home">
+      </div>
+    </main>
+  </div>
+
+
+  <!-- categoria Js Nivel 2-->
+  <div class="jsCategoryN2">
+    <header>
+      <div class="robot">
+        <img src="img/halfRobot.png" class="halfRobot" alt="imagen de robot">
+      </div>
+      <div class="title">
+        MEMORY CODE
+      </div>
+      <div class="timeContainer">
+        <div class="hits">
+          <p class="hits">attempts: <span id="attemptsJNDos" class="timer"></span></p>
+          <p class="hits">hits: <span id="hitsJNDos" class="timer"></span></p>
+          <p class="hits">time: <span id="timerJNDos"></span></p>       
+        </div>
+      </div> 
+      <div class="subtitle">
+        <p>Memorize the pairs</p> <br>
+        <p>SECOND LEVEL</p>
+      </div>
+    </header>
+    <main>
+      <div class="gameTable">
+        <div id="rootTres">
+        </div>
+      </div>
+      <div class="returnButton">
+        <input type="image" class="startButtonJs" src="img/buttonHome.png" id="startButtonJs2" alt="button home">
+      </div>
+    </main>
+  </div>
+
+
+
+  <!-- ventana final-->
+  <div class="PageCongratulations" id="PageCongratulations"> 
+    <header>
+      <div class="robot">
+        <img src="img/halfRobot.png" class="halfRobot" alt="imagen de robot">
+      </div>
+      <div class="title">
+        MEMORY CODE
       </div>
     </header>
     <main>
       <div class="blockWin">
         <div class="titlesEndPage">
+          <div class="subtitle"> 
+            <h2>  Congratulations, you've made it to the next level!</h2>
+          </div>     
+        <div class="timeContainer">
+          <p class="hits">your time in seconds was:<span class="timer" id="timerEnd"> </span></p>           
+          <p class="hits">your attempts:<span id="attempts" class="timer"> </span> </p>
           <div class="subtitle">
-            <h2 class="subtitleEndPage"> ¡Felicitaciones has pasado al siguiente nivel!</h2>
-          </div>
-          <div class="subtitle">
-            <h2 class="subtitleEndPage">¿estas listo?</h2>
-          </div>
+           <h2 class="hits">are you ready?</h2>
+            
         </div>
-        <div class="newLevel">
+        </div>       
+          <div class="newLevel">
           <input type="image" src="img/comencemos.png" class="buttonNewLevel" id="buttonNewLevel"
-            alt="boton para avanzar de nivel">
+            alt="button para avanzar de nivel">
+          </div>
+        <div class="returnButton">
+          <input type="image" class="startButton" src="img/buttonHome.png" id="startButton" alt="button home">
         </div>
-        <div id="rootbuttonsEnd" class="rootbuttonsEnd">
-          <div class="HTML">
-            <input type="image" src="img/botonHTML.png" alt="boton para ingresar a HTML" class="buttonHTML"
-              id="buttonHtmlEnd">
-          </div>
-          <div class="CSS">
-            <input type="image" src="img/botonCSS.png" alt="Boton para ingresar a CSS" class="buttonCSS"
-              id="buttonCssEnd">
-          </div>
-          <div class="JS">
-            <input type="image" src="img/botonJS.png" alt="boton para ingresar a JS" class="buttonJS" id="buttonJsEnd">
-          </div>
-        </div>
+      </div>
     </main>
   </div>
-  <script src="main.js" type="module"></script>
-</body>
 
+
+
+   <!-- ventana final de los Niveles-->
+   <div class="endPage" id="endPageFinal">
+      <header>
+       <div class="robot">
+         <img src="img/halfRobot.png" class="halfRobot" alt="imagen de robot">
+       </div>
+       <div class="title">
+         MEMORY CODE
+       </div>
+      </header>
+      <main>
+        <div class="blockWin">
+          <div class="titlesEndPage">
+             <div class="subtitle">
+               <h2 class="subtitleEndPage"> Congratulations challenge overcome!</h2>
+             </div>          
+             <div class="timeContainer">
+                  <p class="hits">your time in seconds was: <span class="hits"></span></p>                    
+        
+                  <p class="hits">time: <span id="timerEndF" class="timer"></span> </p>
+                  
+                  
+                  <p class="hits">attempts: <span id="attemptsF" class="timer"></span></p>
+                   
+                  
+                  <div class="subtitle">
+                  <h2 class="hits">Now you have to test your knowledge in another category?</h2>
+                  </div>
+             </div>            
+        </div>      
+         <div class="returnButton">
+             <input type="image" class="startButton" src="img/buttonHome.png" id="startButtonEnd"
+                 alt="button home">
+         </div>
+        </div>
+      </main>
+   </div>
+   <script src="main.js" type="module"></script>
+ </body>
 </html>

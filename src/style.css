@@ -1,7 +1,6 @@
-
-.homePage {
+ /* .homePage {
   display: none;
-}
+}  */
 .htmlCategory {
   display: none;
 }
@@ -11,23 +10,37 @@
 .jsCategory {
   display: none;
 }
+.PageCongratulations {
+  display: none;
+}
+
 .endPage {
-  display: block;
+  display: none;
+}
+.htmlCategoryN2{
+  display: none;
+}
+.cssCategoryN2 {
+  display: none;
+}
+.jsCategoryN2 {
+  display: none;
 }
 /* Diseño todas las páginas */
 * {
-  margin: 10px;
+  margin: 5px;
   padding-left: 10px;
   padding-right: 10px;
   box-sizing: border-box;
 }
-body {
-  background-image: url(img/fondo.png); /* Ubicación de la imagen */
+body, html {
+  background-image: url(img/backgroundView.png); /* Ubicación de la imagen */
   background-repeat: no-repeat;
   background-position: center center; /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
   background-attachment: fixed; /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
   background-size: cover; /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
   background-color: purple; /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+  min-height: 100%;
 }
 
 header {
@@ -36,91 +49,104 @@ header {
   justify-content: center;
 }
 
-/* Página de inicio */
+/* Página de home */
 
 .robot {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-self: center;
+  
 }
 .imgLogo {
-  width: 100%;
-  max-width: 140px;
-  height: 175px;
+  width: 68%;
+  max-width: 140%;
   background-size: cover;
+  
 }
 .title {
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-self: center;
-}
-.titleHomePage {
-  display: flex;
+  align-self: center; 
   width: 100%;
-  max-width: 555px;
+  max-width: 55%;
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
   text-align: center;
   color: #ffffff;
-  text-align: justify; /*responsive*/
+  font-size: 250%;
+  margin-top: -9px;
+  margin-left: 10px;
+   
 }
 .subtitle {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-self: center;
+  color: #ffffff;
+  font-size: 16px;
+  
 }
 .subtitleHomePage {
   display: flex;
   width: 100%;
-  max-width: 856px;
-  height: 42px;
+  height: 4.2%;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 36px;
+  font-size: 203%;
   line-height: 42px;
   color: #ffffff;
+  margin-top: -23px;
 }
 
 .rootbuttons {
   flex-wrap: wrap;
-  justify-content: center;
   align-self: center;
   width: auto;
-  height: 400px;
-
+  height: 40%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.HTML,
+.HTML, .css,
 .JS {
-  align-self: flex-end;
-}
-.buttonHTML,
-.buttonJS,
-.buttonCSS {
-  width: 180px;
+  display: flex;
+justify-self: center;
+ 
 }
 
+.buttonCSS {
+  width: 14%;
+  margin-top: 1.4%;
+  margin-left: 1.0%;
+  align-self: center;
+}
+.buttonHTML,
+.buttonJS{
+  width: 58%;
+  margin-top: 6.4%;
+  margin-left: 18%;
+  align-self: center;
+}
 /* Página categoria Html */
 
 .halfRobot {
   width: 100%;
-  max-width: 200px;
-  min-width: 20px;
-  height: 175px;
+  max-width: 56%;
+  min-width: 2%;
+  height: 17.5%;
   background-size: cover;
 }
 
 .gameTable {
   width: 100%;
-  max-width: 1440px;
-  height: 450px;
+  max-width: 95%;
+  max-height: 80%;
   background: rgba(19, 114, 167, 0.4);
   border-radius: 100px;
   display: flex;
@@ -134,31 +160,35 @@ p {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 150%;
   color: #0689ff;
   text-align: justify; /* responsive*/
-}
-
-.footerRoot {
-  align-items: flex-end;
-  flex-direction: row;
-  flex-wrap: wrap;
+  margin: -29px 10px 10px 10px;
 }
 
 .timeContainer {
+
   float: left; /* uno al lado del otro*/
   text-align: right;
-  width: 50%;
-  height: 59px;
-  font-size: 50px;
-  line-height: 59px;
+  width:57% ;
+  height: 5.9%;
+  font-size: 5%;
+  line-height: 5.5%;
   text-align: center;
+  color: #ffffff;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.hits, .timer{
+  align-self: flex-start;
+  margin: 26px 21px 10px 10px;
+  font-size: 20px;
   color: #ffffff;
 }
 
-.startButton {
-  width: 15%;
-  height: 80px;
+.startButton, .startButtonCss, .startButtonHtml, .startButtonJs {
+  width: 10%;
+  height: 8%;
   border: 1px solid rgba(167, 68, 244, 0.6);
   box-sizing: border-box;
 }
@@ -168,9 +198,9 @@ p {
 .blockWin {
   width: 90%;
   margin: auto;
-  height: 550px;
+  height: 75%;
   flex-direction: column;
-  background: url(img/fondoGanador.png);
+  background: url(img/winningFund.png);
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -189,12 +219,12 @@ p {
 .subtitleEndPage {
   width: 100%;
   max-width: 1000px;
-  height: 42px;
+  height: 4.2%;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 3.6%;
+  line-height: 4%;
   color: #ffffff;
 }
 
@@ -204,8 +234,8 @@ p {
 }
 
 .buttonNewLevel {
-  width: 200px;
-  height: 80px;
+  width: 20%;
+  height: 8%;
 }
 
 .rootbuttonsEnd {
@@ -218,80 +248,191 @@ p {
   flex-direction: row;
   justify-content: space-around;
 }
-
-/* .button-HTML2 {
-  width: 20%;
-  max-width: 200px;
-  background-size: cover;
-}
-
-.button-JS2 {
-  width: 20%;
-  max-width: 200px;
-  height: auto;
-  background-size: cover;
-} */
-
-/* @media all and ( min-width : 600px){
-  .main{
-    flex: 1 1 auto;
-  }
-}*/
-
-  .App{
-  display: flex;
+  .App{  
   flex-direction: row;
   flex-wrap: wrap; 
-  width: 140%;
+  width: 100%;
   max-width: 1400px;
-  height: 352px;
+  height: 35%;
   background-size: cover;
   justify-content: space-around;
-  align-content: center;
+  align-content: center; 
 }
 
-img.back{
+
+img.back, img.front{
   content: url('img/HTML.png');
+  flex-shrink: 2;
+  
 }
 img.back1{
   content: url('img/CSS.png');
+  
 }
+
 img.back2{
   content: url('img/JS.png');
+ 
 }
-.carta1, .carta2, .carta3, .carta4,.carta5, .carta6, .carta7, .carta8{
-/* flex-wrap: 1;
-flex-shrink: 3; */
-backface-visibility: hidden;
+.back, .back1, .back2, .front{
+ min-width: 103px;
+  max-width: 118px;
+  margin: 22px  32px 12px;
+}
+
+.root, .rootUno, .root1, .rootDos, .root2, .rootTres{
+    position: relative;
+    flex-wrap: wrap;
+    margin: 3px  3px 3px 3px;
+
+  }
+
+/* para dar zoom a las cartas al darle un click */
+/* .carta1,
+.carta2,
+.carta3,
+.carta4,
+.carta5,
+.carta6,
+.carta7,
+.carta8{ backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
   transform: rotateY(0deg);
-  transition: all 0.3s linear;
-}  
-/* .reverso{
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.3s linear;
-  transform: rotateY(180deg);
-
-} */
-.root{
-    position: relative;
-  }
+  transition: all 0.3s linear; */
   
-  /* .root:hover .carta1 {
-    transform: rotateY(180deg);
-  }
-  
-  .root:hover .reverso {
-    transform: rotateY(360deg);
-  } */
-
-dt, dd{
-  font-size: 30px;
-  color: #ffffff;
+   
+/* } */
+.front{
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3);
 }
+ @media screen and (max-width: 670px) {
+  * {
+    margin: 15px 11px;
+    padding-left: 1px;
+    padding-right: 1px;
+    box-sizing: border-box;
+}
+  
+  body{
+    width:320px ;
+    height: 568px;
+   
+  }
+  .imgLogo {
+    width: 56px;    
+    height: 71px;
+    margin-top: -25px;
+    }
+    .title {
+  
+      font-size: 145%;
+      margin-top: -9px;
+      margin-left: 10px;
+       
+    }
+    .subtitleHomePage {   
+     font-size: 120%;    
+    }
+  .App{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top:-5px ;
+    margin-left: 14px;
+  }
+  .gameTable{
+    background-color:transparent ;
+  }
+  .root, .root1, .root2{
+
+    margin-top:-13px ;
+    margin-left: -10px;
+    margin-bottom:38px ;
+    margin-right: -42px ;
+    height: 300px;
+    width: 300px; 
+  }
+  .buttonHTML,
+.buttonJS,
+.buttonCSS {
+  width: 78px;
+  height: 78px;
+  display: block;
+  
+}
+.buttonHTML{
+  margin-top: -5px;
+}
+.buttonJS{
+  margin-top: -20px;
+}
+.buttonCSS{
+  margin-top: -11px; 
+}
+.hits{
+  margin-top: 18px;
+  margin-left: -10px;
+}
+.halfRobot {
+  width: 63%;
+  max-width: 63px;
+  min-width: 20px;
+  height: 50px;
+  margin-top: 0px;
+  margin-left: 0px;
+  background-size: cover;
+}
+.startButton, .startButtonCss, .startButtonHtml, .startButtonJs{
+  width: 92px;
+  height: 48px;
+  margin-top: -28px;
+  margin-left: 165px;
+ 
+}
+
+img.back{
+  width: 70px;
+  height: 45.6px;
+  flex-grow: 1;
+  align-items: center ;
+  
+}
+img.back1{
+  width: 70px;
+  height: 45.6px;
+  flex-grow: 1;
+  align-items: center ;
+  
+
+
+}
+img.back2, .transition {
+  width: 70px;
+  height: 45.6px;
+  flex-grow: 1;
+  align-items: center ;
+  
+  
+  
+}
+.back, .back1, .back2, .front{
+  min-width: 42px;
+   max-width: 42px;
+   margin: -1px  32px 1px 2px;
+ }
+  
+  
+p{
+  font-size: 16px;
+}
+
+.transition {
+  
+   transform: scale(0.0);
+}
+  }
